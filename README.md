@@ -1,1 +1,2 @@
-# Mad-Libs-Generator-
+# Mad-Libs-Generator
+This Python beginner project is a good start for beginners as it makes use of strings, variables, and concatenation. The Mad Libs Generator manipulates input data, which could be anything: an adjective, a pronoun, or verb. After taking in the input, the program takes the data and arranges it to build a story. This is a very cool Python project to try out if you’re new to coding.
