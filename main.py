@@ -6,6 +6,7 @@ class Madlibs:
     def __init__(self, template, word_type):
         self.template = template
         self.word_type = word_type
+        self.user_words = []
 
     @staticmethod
     def get_template(name, path="./templates/"):
@@ -13,24 +14,27 @@ class Madlibs:
             data = json.load(f)
         return data
 
-    def user_words(self):
-        words = []
+    def get_user_words(self):
         print("Enter the words for the following types:")
         for description in self.word_type:
             user_input = input(description + ": ")
-            words.append(user_input)
-        return words
+            self.user_words.append(user_input)
+        return self.user_words
 
-    def story(self, words):
-        story = self.template.format(*words)
+    def story(self):
+        story = self.template.format(*self.user_words)
         return story
 
+    def select_template():
+        template = input("Enter the name of the template: ")
+        return template
+
 def main():
-    template = Madlibs.get_template("day_at_zoo")
-    word_type = template["word_type"]
-    template = template["template"]
-    words = Madlibs(template, word_type).user_words()
-    print(Madlibs(template, word_type).story(words))
+    template_name = Madlibs.select_template()
+    mad_lib = Madlibs.get_template(template_name)
+    full_madlib = Madlibs(mad_lib["template"], mad_lib["word_type"])
+    full_madlib.get_user_words()
+    print(full_madlib.story())
 
 if __name__ == "__main__":
     main()

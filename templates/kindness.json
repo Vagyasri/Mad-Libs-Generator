@@ -1,4 +1,4 @@
 {
     "word_type": [ "noun", "plural_noun", "noun" , "plural_noun", "place", "adjective", "noun"],
-    "template": "------------------------------------------\nBe kind to your {},- footed, {}. For a duck may be somebody's, {}. Be kind to your {} in, {} Where the weather is always {}. You may think that is this the {}, Well it is.\n------------------------------------------"
+    "template": "------------------------------------------\nBe kind to your {}-footed {}\nFor a duck may be somebody's {}\nBe kind to your {} in the {}\nWhere the weather is always {}\nYou may think that is this the {}\nWell, it is!\n------------------------------------------"
 }
